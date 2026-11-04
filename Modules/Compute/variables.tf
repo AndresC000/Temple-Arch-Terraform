@@ -60,3 +60,12 @@ variable "storage_profile_image_reference_publisher" {
     version   = "latest"    
  }
 }
+
+variable "web_subnet_id" {
+  description = "web-subnet-id"
+  type        = string
+}
+variable "public_ip_id" {
+  description = "public-ip-id"
+  type        = string
+}

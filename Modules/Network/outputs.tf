@@ -1,16 +1,16 @@
-output "vnet-id" {
+output "vnet_id" {
   value = azurerm_virtual_network.vnet.id
 }
 
-output "subnet-web-id" {
+output "subnet_web_id" {
   value = azurerm_subnet.web.id
 }
-output "subnet-mgt-id" {
+output "subnet_mgt_id" {
   value = azurerm_subnet.mgt.id
 }
-output "subnet-app-gateway-id" {
+output "subnet_app_gateway_id" {
   value = azurerm_subnet_appgateway.subnet_app_gateway.id
 }
-output "public-ip-id" {
+output "public_ip_id" {
   value = azurerm_public_ip.public_ip.id
 }
