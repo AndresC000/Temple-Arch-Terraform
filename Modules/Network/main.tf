@@ -61,11 +61,11 @@ resource "azurerm_network_security_rule" "web_ssh" {
   source_address_prefix       = var.mgt_adress_prefix
   destination_address_prefix  = var.web_address_space
   resource_group_name         = var.resource_group_name
-  network_security_group_name = azurerm_network_security_group.nsg_web.name
+  network_security_group_name = azurerm_network_security_group.nsg_web
 }
 
 resource "azurerm_network_security_rule" "web_http" {
-  name                        = var.nsg_rule_name_web
+  name                        = var.nsg_rule_name
   priority                    = 200
   direction                   = "Inbound"
   access                      = "Allow"
@@ -80,7 +80,7 @@ resource "azurerm_network_security_rule" "web_http" {
 
 resource "azurerm_subnet_network_security_group_association" "web_nsg_association" {
   subnet_id                 = azurerm_subnet.web.id
-  network_security_group_id = azurerm_network_security_group.nsg_web.id
+  network_security_group_id = azurerm_network_security_group.nsg.id
 }
 
 resource "azurerm_network_security_rule" "nsg_mgt" {
@@ -94,7 +94,7 @@ resource "azurerm_network_security_rule" "nsg_mgt" {
   source_address_prefix       = "*"
   destination_address_prefix  = var.mgt_adress_prefix
   resource_group_name         = var.resource_group_name
-  network_security_group_name = azurerm_network_security_group.nsg_mgt.name
+  network_security_group_name = azurerm_network_security_group.nsg_mtg.name
 
 }
 
