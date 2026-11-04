@@ -70,7 +70,7 @@ variable "nsg_name" {
   default = "NSG-Lab01-Terraform"
 }
 
-variable "nsg_name-web" {
+variable "nsg_name_web" {
   description = "NSG-name"
   type = string
   default = "NSG-Web"
