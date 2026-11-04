@@ -63,7 +63,14 @@ variable "web_address_space"{
   default = "10.1.1.0/24"
 }
 
+
 variable "nsg_name" {
+  description = "NSG-name"
+  type = string
+  default = "NSG-Lab01-Terraform"
+}
+
+variable "nsg_name-web" {
   description = "NSG-name"
   type = string
   default = "NSG-Web"
@@ -74,6 +81,22 @@ variable "nsg_name_mgt"{
   default = "NSG-Mgt"
 }
 
+variable "nsg_rule_name" {
+  description = "NSG-rule-name"
+  type = string
+  default = "NSG-Rule-SSH"
+}
 
 
+variable "nsg_rule_name_web" {
+  description = "NSG-rule-name"
+  type = string
+  default = "NSG-Rule-HTTP"
+}
 
+
+variable "nsg_name_rule_ssh_admin" {
+  description = "NSG-name-rule-ssh-admin"
+  type = string
+  default = "Allow-SSH-Admin"
+}
