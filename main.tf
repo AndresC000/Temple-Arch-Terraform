@@ -17,3 +17,30 @@ module "Compute" {
     public_ip_id = module.Network.public_ip_id
 }
 
+module "Storage" {
+    source = "./Modules/Storage"
+    location = var.location
+    resource_group_name = azurerm_resource_group.rg.name
+}
+
+module "Keyvault" {
+    source = "./Modules/Keyvault"
+    location = var.location
+    resource_group_name = azurerm_resource_group.rg.name
+
+}
+
+module "Monitor" {
+    source = "./Modules/Monitor"
+    location = var.location
+    resource_group_name = azurerm_resource_group.rg.name
+}
+
+module "AppGateway" {
+    source = "./Modules/AppGateway"
+    location = var.location
+    resource_group_name = azurerm_resource_group.rg.name
+    subnet_id = module.Network.subnet_appgw_id
+
+}
+
