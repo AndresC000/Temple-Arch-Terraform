@@ -61,7 +61,7 @@ resource "azurerm_network_security_rule" "web_ssh" {
   source_address_prefix       = var.mgt_adress_prefix
   destination_address_prefix  = var.web_address_space
   resource_group_name         = var.resource_group_name
-  network_security_group_name = azurerm_network_security_group.nsg_web.name
+  network_security_group_name = azurerm_network_security_rule.nsg_web.name
 }
 
 resource "azurerm_network_security_rule" "web_http" {

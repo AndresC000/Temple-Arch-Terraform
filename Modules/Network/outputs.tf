@@ -9,7 +9,7 @@ output "subnet-mgt-id" {
   value = azurerm_subnet.mgt.id
 }
 output "subnet-app-gateway-id" {
-  value = azurerm_subnet_appgateway.subnet_app_gateway.id
+  value = azurerm_subnet.app_gateway.id
 }
 output "public-ip-id" {
   value = azurerm_public_ip.public_ip.id
