@@ -1,12 +1,12 @@
 output "AppGateway_id" {
-  value = azurerm_application_gateway.appgw.id
+  value = azurerm_application_gateway.AppGateway.id
   
 }
 
 output "AppGateway_name" {
-  value = azurerm_application_gateway.appgw.name
+  value = azurerm_application_gateway.AppGateway.name
 }
 
 output "public_ip_id" {
-  value = azurerm_public_ip.public_ip.id
+  value = azurerm_public_ip.id
 }
