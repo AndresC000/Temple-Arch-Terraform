@@ -3,7 +3,3 @@ output "AppGateway_id" {
   
 }
 
-output "AppGateway_name" {
-  value = azurerm_application_gateway.AppGateway.name
-}
-

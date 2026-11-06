@@ -40,9 +40,9 @@ module "AppGateway" {
     source = "./Modules/AppGateway"
     location = var.location
     resource_group_name = azurerm_resource_group.rg.name
-    AppGateway_name = module.AppGateway.AppGateway_name
-    app_gateway_subnet = module.AppGateway.subnet_appgw_id
-    public_ip = module.AppGateway.public_ip_id
+    AppGateway_name = "AppGateway"
+    app_gateway_subnet = module.Network.subnet_app_gateway_id
+    public_ip = module.Network.public_ip_id
 
 }
 
