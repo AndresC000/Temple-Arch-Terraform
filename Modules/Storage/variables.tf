@@ -13,7 +13,7 @@ variable "resource_group_name" {
 variable "storage_account_name" {
   description = "StorageAccountName"
   type = string
-  default = "stterraformlab001"
+  default = "storagtfandlab001"
 }
 
 variable "properties_storage_account" {

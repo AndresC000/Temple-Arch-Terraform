@@ -43,11 +43,11 @@ variable "mgt_adress_prefix" {
 variable "app_gtw_name" {
   description = "AppGatewayname"
   type = string
-  default = "AppGatway-lab-Terraform"
+  default = "AppGateway-lab-Terraform"
 }
 
 variable "app_gateway_subnet"{
-  description = "AppGatway-subnet Address Space"
+  description = "AppGateway-subnet Address Space"
   type = string
   default = "10.1.2.0/24"
 }
@@ -81,14 +81,16 @@ variable "nsg_name_mgt"{
   default = "NSG-Mgt"
 }
 
-variable "nsg_rule_name" {
-  description = "NSG-rule-name"
-  type = string
-  default = "NSG-Rule-SSH"
-}
 
 
-variable "nsg_rule_name_web" {
+
+
+
+
+
+
+
+variable "nsg_rule_name_http" {
   description = "NSG-rule-name"
   type = string
   default = "NSG-Rule-HTTP"
@@ -99,4 +101,10 @@ variable "nsg_name_rule_ssh_admin" {
   description = "NSG-name-rule-ssh-admin"
   type = string
   default = "Allow-SSH-Admin"
+}
+
+variable "nsg_name_rule_mgt" {
+  description = "NSG-name-rule-mgt"
+  type = string
+  default = "Allow-TCP-22-Mgt"
 }

@@ -51,7 +51,7 @@ resource "azurerm_network_security_group" "nsg_mtg" {
 }
 
 resource "azurerm_network_security_rule" "web_ssh" {
-  name                        = var.nsg_rule_name
+  name                        = var.nsg_name_rule_ssh_admin
   priority                    = 100
   direction                   = "Inbound"
   access                      = "Allow"
@@ -65,7 +65,7 @@ resource "azurerm_network_security_rule" "web_ssh" {
 }
 
 resource "azurerm_network_security_rule" "web_http" {
-  name                        = var.nsg_rule_name
+  name                        = var.nsg_rule_name_http
   priority                    = 200
   direction                   = "Inbound"
   access                      = "Allow"
@@ -84,7 +84,7 @@ resource "azurerm_subnet_network_security_group_association" "web_nsg_associatio
 }
 
 resource "azurerm_network_security_rule" "nsg_mgt" {
-  name                = var.nsg_name_rule_ssh_admin
+  name                = var.nsg_name_rule_mgt
   priority                    = 100
   direction                   = "Inbound"
   access                      = "Allow"

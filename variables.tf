@@ -10,11 +10,3 @@ variable "resource_group_name" {
     default     = "rg-Terraform-lab-001"
 }
 
-variable "subnet_web_id" {
-    description = "subnet web id"
-    type        = string
-}
-variable "public_ip_id" {
-    description = "public ip id"
-    type        = string
-}

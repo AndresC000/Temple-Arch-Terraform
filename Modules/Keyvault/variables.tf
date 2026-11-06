@@ -36,8 +36,8 @@ variable "keyvault_access_policy" {
     certificate_permissions = list(string)
   })
   default = {
-    key_permissions = ["get", "list"]
-    secret_permissions = ["get", "list"]
-    certificate_permissions = ["get", "list"]
+    key_permissions = ["Get", "List" ]
+    secret_permissions = ["Get", "List"]
+    certificate_permissions = ["Get", "List"]
   }
 }
